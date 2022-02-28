@@ -1,0 +1,51 @@
+<!-- A01 - Form Validation - MTM1526
+This is an HTML file for above assignment
+submitted by Masayo Williams -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Assignment</title>
+    <!-- stylesheet for this page -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Form Assignment</legend>
+            <!-- this section changes layout @25rem -->
+            <div class="split">
+                <div class="field">
+                    <label for="full-name">Full Name</label><br>
+                    <input type="text" id="full-name" value="" />        
+                </div>
+    
+                <div class="field">
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" value="" />
+                </div>
+            </div>
+            
+            <div class="field">
+                <label for="message">Message</label><br>
+                <textarea type="text" id="message" value=""></textarea>
+            </div>
+    
+            <div class="field">
+                <input class="submit" type="submit" value="Submit" />
+            </div>        
+        </fieldset>
+    </form>
+
+    <!-- placeholders for feedback and errors -->
+    <p class="feedback"></p> 
+    <ul class="errors"></ul>
+   
+    <!-- use js script here -->
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
