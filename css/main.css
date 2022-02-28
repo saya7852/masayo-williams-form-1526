@@ -1,0 +1,153 @@
+/* A01 Form Validation - MTM1526
+This is a submission by Masayo Williams
+*/
+
+/* STYLE SPECS */
+/* ****** COLOURS ******
+
+Borders #DDD
+Form Background #F5F5F5
+Submit Button #6495ED
+
+/* ****** FONT STACK ******
+
+Arial, Helvetica, Helvetica Neue, sans-serif
+Font-size for entire web-page excluding <legend> tag is 1rem. Font-size for
+<legend> is 2rem.
+*/
+
+/* ****** MEDIA QUERIES ******
+
+Smart-phone - below 25rem
+Tablet - 25 to below 40rem
+Desktop - 40 to 50rem
+* MAX WIDTH 50rem *
+*/
+
+/* GENERAL STYLES */
+/* apply box model */
+* {
+    box-sizing: border-box;
+}
+
+/* max-width, font-family & size */
+html {
+    max-width: 50rem;
+    font-family: Arial, Helvetica, 'Helvetica-Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* add space around body */
+body {
+    padding: 1rem;
+    margin: 0;
+}
+
+/* form layout & styles */
+/* add border */
+legend, fieldset, input, textarea {
+    border: 2px solid #DDD;
+}
+
+/* form legend */
+legend {
+    font-size: 2rem;
+    padding: 1.2rem;
+    background-color: #FFF;
+}
+
+/* form background */
+fieldset {
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+/* form fields */
+input, textarea {
+    background-color: #FFF;
+    padding: 0.6rem;
+    margin-top: 0.5rem;
+    border-radius: 3px;
+    width: 100%;
+}
+
+/* add space above input fields */
+.field {
+    margin-top: 1rem;
+}
+
+/* don't use browser default autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* use cream background & no outline (except for submit button) */
+textarea:focus, input:focus:not(.submit) {
+    outline: none;
+    background-color: rgb(255, 253, 209);
+}
+
+/* submit button styles */
+.submit {
+    background-color: #6495ED;
+    color: #FFF;
+    font-size: 1rem;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+/* END of form styles */
+
+
+
+/* remove bullets from ul */
+ul {
+    list-style-type: none;
+}
+
+/* message font colours */
+.feedback {
+    color: green;
+}
+.errors {
+    color: red;
+}
+
+
+/* MEDIA QUERIES 
+
+Mobile first styles will be overridden by below:
+For screens wider than 25rem */
+@media only screen and (min-width: 25rem) {
+
+    /* show Full Name & Email fields side-by-side */
+    .split {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    /* add space in-between */
+    .split div.field:first-of-type {
+        margin-right: 1rem;
+    }
+
+    /* change submit button width */
+    .submit {
+        width: 7rem;
+    }
+
+    /* add more padding to the body */
+    body {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (min-width: 40rem) {
+    
+    /* centre the layout */
+    html {
+        margin: 0 auto;
+    }
+}
